@@ -1,0 +1,12 @@
+{
+    "distributions": {
+      "ubuntu": "dpkg -l",
+      "debian": "dpkg -l",
+      "centos": "rpm -qa",
+      "fedora": "rpm -qa",
+      "arch": "pacman -Q",
+      "gentoo": "equery list",
+      "alpine": "apk info -v"
+    }
+  }
+  
