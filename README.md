@@ -23,7 +23,7 @@ The PackageHunter is a Python script that connects to a remote server via SSH an
 
 - Python 3.x
 - Paramiko (SSH library for Python)
-- `distributions.json` configuration file (see Configuration section)
+- `distributions.json` configuration file (see [Configuration](#configuration) section)
 
 To install the required dependencies, you can use pip:
 
