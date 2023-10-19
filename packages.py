@@ -2,6 +2,15 @@ import argparse
 import json
 import paramiko
 import getpass
+import socket
+
+def is_server_reachable(hostname):
+    try:
+        # Check if the server is reachable
+        socket.create_connection((hostname, 22), timeout=5)
+        return True
+    except (ConnectionRefusedError, TimeoutError):
+        return False
 
 def load_distribution_commands():
     try:
@@ -75,6 +84,11 @@ if __name__ == "__main__":
         parser.print_help()
         exit(1)
     
+    # Check if the server is reachable
+    if not is_server_reachable(args.ip_address):
+        print("Server at {} is not reachable. Please check the server address.".format(args.ip_address))
+        exit(1)
+    
     # Prompt for username and password
     username = input("Enter your SSH username: ")
     password = getpass.getpass("Enter your SSH password: ")
@@ -109,5 +123,3 @@ if __name__ == "__main__":
             file.write("\nInstalled Packages Information:\n")
             file.write(package_info)
         print("Information written to '{}'.".format(filename))
-
-
