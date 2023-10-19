@@ -32,7 +32,7 @@ pip install paramiko
 ```
 ## Usage
 
-To use the script, follow these steps:
+- To use the script, follow these steps:
 
 1. Clone the repository:
 
@@ -42,23 +42,23 @@ git clone https://github.com/trojkry/Get-packages-from-server.git
 
 2. Navigate to the script's directory.
 3. Run the script with desired options:
-    -To print informations to the console
+    - To print informations to the console
 
 ```shell
 python3 packages.py <ip_address>
 ```
 
--To write the information to a text file (customizable filename):
+- To write the information to a text file (customizable filename):
 
 ```shell
 python3 packages.py <ip_address> -o w -f <custom_filename>
 
 ```
-Replace <ip_address> with the IP address of the remote server.
+- Replace <ip_address> with the IP address of the remote server.
 4. The script will prompt you for your SSH username and password, and then it will connect to the server and retrieve the requested information.
 
 ## Configuration
-The script uses a distributions.json configuration file to map Linux distribution names to the corresponding package retrieval commands. You can customize this file to add or modify distribution-specific commands.
+- The script uses a distributions.json configuration file to map Linux distribution names to the corresponding package retrieval commands. You can customize this file to add or modify distribution-specific commands.
 
 Example distributions.json file:
 ```shell
@@ -73,4 +73,4 @@ Example distributions.json file:
 
 ## License
 
-This script is open-source and available under the MIT License.
+This script is open-source and available under the [MIT License](https://mit-license.org/).
