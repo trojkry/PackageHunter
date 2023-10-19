@@ -1,6 +1,6 @@
 # PackageHunter
 
-The **Get ** is a Python script that connects to a remote server via SSH and retrieves the distribution name and package information from the server. It provides the option to either print the information to the console or write it to a text file.
+The PackageHunter is a Python script that connects to a remote server via SSH and retrieves the distribution name and package information from the server. It provides the option to either print the information to the console or write it to a text file.
 
 ## Table of Contents
 
